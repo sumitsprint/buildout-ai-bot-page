@@ -1,0 +1,101 @@
+/* ---- Base ---- */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #1f2430;
+  background: #f8f9fb;
+}
+
+/* ---- Header + Nav ---- */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e9ecf2;
+}
+header h1 {
+  font-size: 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: #2c3a4b;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+header nav a.active,
+header nav a:hover {
+  background: #eef1f7;
+}
+
+/* ---- Main layout ---- */
+main {
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 0 12px;
+}
+
+/* ---- Chat thread ---- */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+section > div {
+  background: #fff;
+  border: 1px solid #e9ecf2;
+  border-radius: 10px;
+  padding: 10px;
+}
+section > div span {
+  font-weight: 600;
+  color: #39465a;
+}
+section > div p {
+  margin: 6px 0 0;
+}
+
+/* ---- Form ---- */
+form {
+  display: flex;
+  gap: 8px;
+}
+input[placeholder="Message Bot AI..."] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d9dee8;
+  background: #fff;
+}
+button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #3e63dd;
+  color: #fff;
+  cursor: pointer;
+}
+button[type="button"] {
+  background: #7b8ab8; /* Save button slightly different */
+}
+button:hover { filter: brightness(0.97); }
+
+/* ---- History list ---- */
+ul { list-style: none; padding: 0; }
+li {
+  background: #fff;
+  border: 1px solid #e9ecf2;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width: 640px) {
+  header { padding: 10px 12px !important; }
+  header nav { display: flex; gap: 8px; flex-wrap: wrap; }
+  main { margin: 12px auto; }
+  form { flex-direction: column; }
+  button { width: 100%; }
+}
+section > div:hover .ai-actions {
+  opacity: 1;
+}
